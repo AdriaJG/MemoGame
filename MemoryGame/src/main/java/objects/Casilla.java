@@ -7,11 +7,12 @@ import constantes.*;
 
 public class Casilla {
 	private JToggleButton casilla;
-	private Icon imagen = Imagenes.ALIEN;
-	public final int TAMAÑO = 100;
+	private ImageIcon imagen;
+	public final int TAMAÑO = Imagenes.TAMAÑO;
 
-	public Casilla() {
+	public Casilla(ImageIcon icono) {
 		this.casilla = new JToggleButton();
+		this.imagen = icono;
 		this.casilla.setSelectedIcon(imagen);
 		this.casilla.setSize(new Dimension(TAMAÑO, TAMAÑO));
 		this.casilla.setDisabledIcon(imagen);
