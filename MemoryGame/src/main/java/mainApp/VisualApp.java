@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Timer;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -82,10 +83,11 @@ public class VisualApp extends JFrame {
 			if (comparaCasilla.comparador(casillas[i][j].getImagen())) {
 				aciertos++;
 			} else {
-				comparaCasilla.getButton().setSelected(false);
-				casillas[i][j].getButton().setSelected(false);
+				
 				comparaCasilla.getButton().setEnabled(true);
 				casillas[i][j].getButton().setEnabled(true);
+				comparaCasilla.getButton().setSelected(false);
+				casillas[i][j].getButton().setSelected(false);
 				comparaCasilla.getButton().setIcon(null);
 				casillas[i][j].getButton().setIcon(null);
 			}

@@ -1,6 +1,7 @@
 package objects;
 
 import java.awt.Dimension;
+import java.awt.Image;
 
 import javax.swing.*;
 import constantes.*;
@@ -12,7 +13,7 @@ public class Casilla {
 
 	public Casilla(ImageIcon icono) {
 		this.casilla = new JToggleButton();
-		this.imagen = icono;
+		this.imagen = new ImageIcon(icono.getImage().getScaledInstance(100, 100,  java.awt.Image.SCALE_SMOOTH));
 		this.casilla.setSelectedIcon(imagen);
 		this.casilla.setSize(new Dimension(TAMAÑO, TAMAÑO));
 		this.casilla.setDisabledIcon(imagen);
